@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>toastr.js: Android Style Toast Plugin For Web (Live Demo)</title>
+    <meta name="description" content="This is a live demo page for the javascript library toastr.js which lets you show android style toast notifications in your page.">
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://www.voidtricks.com/img/voidtricks-favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 120x120 144x144 152x152" href="https://www.voidtricks.com/img/voidtricks-touchicon.ico">
+    <link rel="stylesheet" href="toastr/toastr.css">
+    <style>
+        body,html{
+            padding:0;
+            margin:0;
+            font-size: 14px;
+            color:#333;
+        }
+        .fl{float:left} .fr{float:right}
+        .clear:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .header{
+            width: 100%;
+            padding: 15px 0;
+            box-shadow: 0 5px 30px #e7e7e7;
+        }
+        .wrap{
+            width: 90%;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+        .btn{
+            padding: 8px 10px;
+            border: 0;
+            background: #1dbc91;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .docBtn{
+            margin-top:12px;
+        }
+        .voidBtn{
+            margin-top:12px;
+            background: #ef4136;
+            margin-left:10px;
+        }
+        .downBtn{
+            margin-top:12px;
+            background: #414142;
+            margin-left:10px;
+        }
+        .voidDemo{
+            margin-top:22px;
+margin-bottom:100px;
+        }
+        h1{
+            font-size: 28px;
+            color: #7c7c7c;
+        }
+        h2{
+            font-size: 16px;
+            color: #818181;
+            font-weight: bold;
+        }
+        .italic{
+            font-style: italic;
+        }
+        input,select{
+            padding: 5px 10px;
+            background: #1dbc91;
+            border: 1px solid #18b98e;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 4px;
+            max-width: 150px;
+        }
+        @media screen and (max-width: 678px){
+            .header img{
+                float: none;
+                width: 200px;
+                margin:0 auto;
+                display: block;
+            }
+            .menu{
+                margin: 0 auto;
+                width: 300px;
+                float: none;
+            }
+        }
+        .float-group{
+            float: left;
+            padding-right: 20px;
+            box-sizing: border-box;
+
+        }
+        .w33{
+            width: 33%;
+        }
+        .btn2{
+            background: #ef4136;
+        }
+@media screen and (max-width: 538px){
+	.w33{
+	width: 100%;
+	padding-right:0;
+}
+}
+    </style>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="wrap clear">
+            <a href="https://demo.voidtricks.com"><img src="https://demo.voidtricks.com/img/voidtricks-demo.png" alt="void Tricks demo logo" class="fl"></a>
+            <div class="menu clear fr">
+                <a href="https://www.voidtricks.com" class="fr"><button class="btn voidBtn">void Tricks Home</button></a>
+                <a href="https://www.voidtricks.com/toastr/" class="fr"><button class="btn downBtn">Download</button></a>
+                <a href="https://www.voidtricks.com/toastr/#documentation" class="fr"><button class="btn docBtn">Docs</button></a>
+            </div>
+        </div>
+    </header>
+    <div class="voidDemo clear">
+        <div class="wrap">
+
+                <h1>toastr.js: Android Style Toast Plugin For Web (Live Demo)</h1>
+                <h2>Use developer tools (F12) in your browser to see how it looks on various devices's screens</h2>
+                <br><br>
+                <button id="notify" class="btn btn2">Trigger Toast</button>
+                <button id="close" class="btn btn2">Close (if autohide is false)</button>
+                <br><br>
+                <h3>Settings</h3>
+            <div class="clear">
+                <div class="float-group w33">
+                    <p>Theme</p>
+                    <select name="" id="themes">
+                        <option value="">Android</option>
+                        <option value="moon">moon</option>
+                        <option value="sun">sun</option>
+                        <option value="ocean">ocean</option>
+                        <option value="grassland">grassland</option>
+                        <option value="rainbow">rainbow</option>
+                    </select>
+                </div>
+                <div class="float-group w33">
+                        <p>Animation</p>
+                        <select name="" id="ani">
+                            <option value="fade">fade</option>
+                            <option value="slide">slide</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="float-group w33">
+                <p>Notification Position</p>
+                <select name="" id="pos">
+                    <option value="bottomCenter">bottomCenter</option>
+                    <option value="bottomLeft">bottomLeft</option>
+                    <option value="bottomRight">bottomRight</option>
+
+                    <option value="topCenter">topCenter</option>
+                    <option value="topLeft">topLeft</option>
+                    <option value="topRight">topRight</option>
+                    
+                </select>
+                </div>
+                <div class="float-group w33">
+                    <p>Autohide Timeout Duration (ms)</p>
+                    <input name="" id="dock" type="number" value="2000">
+                </div>
+                <div class="float-group w33">
+                    <p>Autohide</p>
+                    <select name="" id="shape">
+                        <option value="1">true</option>
+                        <option value="2">false</option>
+                    </select>
+                </div>
+
+
+
+        </div>
+    </div>
+    <!-- Latest jQuery Library CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="toastr/toastr.js"></script>
+    <script>
+        var opt = { theme: 'default' };
+        $(document).ready(function(){
+            $("#themes").change(function(){
+                var theme = $(this).val();
+                opt['theme'] = theme;
+                
+                flatify();
+            });
+
+            $("#pos").change(function(){
+                var pos = $(this).val();
+                opt['position'] = pos;
+                
+                flatify();
+            });
+
+            $("#dock").change(function(){
+                var pos = $(this).val();
+                opt['timeout'] = pos;
+                
+                flatify();
+            });
+
+            $("#ani").change(function(){
+                var pos = $(this).val();
+                opt['animation'] = pos;
+                
+                flatify();
+            });
+
+            $("#shape").change(function(){
+                var pos = $(this).val();
+                if(pos == "1"){
+                    opt['autohide'] = true;
+                }else{
+                    opt['autohide'] = false;
+                }
+                                
+                flatify();
+            });
+
+            flatify();
+        });
+
+        function flatify(){
+            
+            var toastr = new Toastr(opt);
+            $("#notify").click(function(){
+                toastr.show('Hi there! This is a Toast.');
+            });
+
+            $("#close").click(function(){
+                toastr.hide();
+            });
+        }
+    </script>
+
+</body>
+</html>
