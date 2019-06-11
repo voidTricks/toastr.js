@@ -11,6 +11,6 @@ Official documentation <a href="https://www.voidtricks.com/toatr/">https://www.v
 
 Live Demo <a href="https://demo.voidtricks.com/toatr/">https://demo.voidtricks.com/toatr/</a>
 
-
+<img src="https://www.voidtricks.com/img/thumbnails/toatr.png" alt="toastr.js">
 
 
