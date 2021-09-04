@@ -8,13 +8,16 @@
     <meta name="description" content="This is a live demo page for the javascript library toastr.js which lets you show android style toast notifications in your page.">
     <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64" href="https://www.voidtricks.com/img/voidtricks-favicon.ico">
     <link rel="apple-touch-icon" sizes="57x57 72x72 114x114 120x120 144x144 152x152" href="https://www.voidtricks.com/img/voidtricks-touchicon.ico">
-    <link rel="stylesheet" href="toastr/toastr.css">
+    <link rel="stylesheet" href="../dist/toastr.css">
     <style>
         body,html{
             padding:0;
             margin:0;
             font-size: 14px;
             color:#333;
+        }
+        .logo{
+            max-width: 240px;
         }
         .fl{float:left} .fr{float:right}
         .clear:after{
@@ -115,11 +118,10 @@ margin-bottom:100px;
 <body>
     <header id="header" class="header">
         <div class="wrap clear">
-            <a href="https://demo.voidtricks.com"><img src="https://demo.voidtricks.com/img/voidtricks-demo.png" alt="void Tricks demo logo" class="fl"></a>
+            <a href="https://voidtricks.com"><img src="https://voidtricks.com/assets/img/voidtricks-logo.png" alt="void Tricks logo" class="fl logo"></a>
             <div class="menu clear fr">
-                <a href="https://www.voidtricks.com" class="fr"><button class="btn voidBtn">void Tricks Home</button></a>
-                <a href="https://www.voidtricks.com/toastr/" class="fr"><button class="btn downBtn">Download</button></a>
-                <a href="https://www.voidtricks.com/toastr/#documentation" class="fr"><button class="btn docBtn">Docs</button></a>
+                <a href="https://github.com/voidTricks/toastr.js" class="fr"><button class="btn downBtn">Download</button></a>
+                <a href="https://voidtricks.com/toastr.js/" class="fr"><button class="btn docBtn">Docs</button></a>
             </div>
         </div>
     </header>
@@ -185,7 +187,7 @@ margin-bottom:100px;
     </div>
     <!-- Latest jQuery Library CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="toastr/toastr.js"></script>
+    <script src="../dist/toastr.js"></script>
     <script>
         var opt = { theme: 'default' };
         $(document).ready(function(){

@@ -7,10 +7,10 @@ toastr.js is developed with the intention of providing Android Toast style notif
 
 Although, the default style is the replica of Android toast, you can still customize it with available options like theme, position, animation etc...
 
-Official documentation <a href="https://www.voidtricks.com/toatr/">https://www.voidtricks.com/toatr/</a>
+Official documentation <a href="https://www.voidtricks.com/toastr.js/">https://www.voidtricks.com/toastr.js/</a>
 
-Live Demo <a href="https://demo.voidtricks.com/toatr/">https://demo.voidtricks.com/toatr/</a>
+Live Demo <a href="https://voidtricks.com/toastr.js/demo/">https://voidtricks.com/toastr.js/demo/</a>
 
-<img src="https://www.voidtricks.com/img/thumbnails/toatr.png" alt="toastr.js">
+<img src="https://voidtricks.com/toastr.js/toastr.png" alt="toastr.js">
 
 
